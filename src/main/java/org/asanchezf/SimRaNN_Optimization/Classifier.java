@@ -54,11 +54,11 @@ import java.util.concurrent.TimeUnit;
 public class Classifier {
 
     static org.apache.log4j.Logger log = Logger.getLogger(Classifier.class);
-    private static String datasetPath = "/Users/AlbertSanchez/Desktop/TFM (noDropBox)/Dataset/binaryDS/dataset.csv";
-    private static String savePathOptimization = "resources/optimization/binaryDS/";
+    private static String datasetPath = "/Users/AlbertSanchez/Desktop/TFM (noDropBox)/Dataset/ternaryDS/1/dataset.csv";
+    private static String savePathOptimization = "resources/optimization/ternaryDS/1/";
     private static int labelIndex = 28;  //15 values in each row of the dataset.csv; CSV: 14 input features followed by an integer label (class) index. Labels are the 15th value (index 14) in each row
-    private static int numClasses = 2;   //2 classes (types of incidents). 0 - No incident | 1 - Incident
-    private static int totalBatches = 3896; //SimRa binary dataset: 3896
+    private static int numClasses = 3;   //3 classes (types of incidents). Classes have integer values 0 (No Incident), 1 (Incident) and 2 (Incident Type N)
+    private static int totalBatches = 3732; //SimRa dataset (Type-Size): 1-3493 | 2-3732 | 3-3656 | 4-3683 | 5-3850 | 6-3864 | 7-3362 | 8-3580
     private static int batchSize = 512;
     private static double ratio = 0.7;
     private static long seed = 6;

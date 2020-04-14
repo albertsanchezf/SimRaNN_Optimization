@@ -57,11 +57,10 @@ public class Classifier {
     private static String datasetPath = "/Users/AlbertSanchez/Desktop/TFM (noDropBox)/Dataset/binaryDS/dataset.csv";
     private static String savePathOptimization = "resources/optimization/binaryDS/";
     private static int labelIndex = 28;  //15 values in each row of the dataset.csv; CSV: 14 input features followed by an integer label (class) index. Labels are the 15th value (index 14) in each row
-    private static int numClasses = 2;   //2 classes (types of incidents). 0 - No incident | 1 - Incident
+    private static int numClasses = 1;   //0 - No incident | 1 - Incident
     private static int totalBatches = 3896; //SimRa binary dataset: 3896
     private static int batchSize = 512;
     private static double ratio = 0.7;
-    private static long seed = 6;
     private static int numEpoch = 1000/((int)Math.ceil((double)totalBatches/(double)batchSize)); //We set the total iteration to 1000. For these reason the nEpochs depend on the totalBatches and the batchSize
 
     public static void main(String[] args) throws  Exception {
